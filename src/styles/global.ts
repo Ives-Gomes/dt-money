@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: var(--background);
+    background: ${({ theme }) => theme.background};
     -webkit-font-smoothing: antialiased;
   }
 

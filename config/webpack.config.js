@@ -306,6 +306,9 @@ module.exports = function (webpackEnv) {
         '@components': path.resolve(__dirname, '../src/components'),
         '@assets': path.resolve(__dirname, '../src/assets'),
         '@styles': path.resolve(__dirname, '../src/styles'),
+        '@shared': path.resolve(__dirname, '../src/shared'),
+        '@interfaces': path.resolve(__dirname, '../src/shared/interfaces'),
+        '@utils': path.resolve(__dirname, '../src/shared/utils'),
 
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/

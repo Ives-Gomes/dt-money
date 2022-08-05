@@ -17,6 +17,15 @@
       "@styles/*": [
         "./src/styles/*"
       ],
+      "@shared/*": [
+        "./src/shared/*"
+      ],
+      "@interfaces/*": [
+        "./src/shared/interfaces/*"
+      ],
+      "@utils/*": [
+        "./src/shared/utils/*"
+      ],
     },
     "allowJs": true,
     "skipLibCheck": true,
