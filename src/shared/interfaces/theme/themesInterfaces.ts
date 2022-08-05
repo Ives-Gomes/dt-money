@@ -1,5 +1,6 @@
 export interface Theme {
   red: string;
+  green: string;
   blue: string;
   blue_light: string;
   text_title: string;
