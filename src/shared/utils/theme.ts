@@ -9,6 +9,8 @@ const theme: Theme = {
   text_body: '#969CB3',
   background: '#F0F2F5',
   shape: '#FFFFFF',
+  input_background: '#E7E9EE',
+  input_border: '#D7D7D7',
 };
 
 export default theme;

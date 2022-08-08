@@ -7,4 +7,6 @@ export interface Theme {
   text_body: string;
   background: string;
   shape: string;
+  input_background: string;
+  input_border: string;
 }
