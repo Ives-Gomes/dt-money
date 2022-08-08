@@ -29,6 +29,7 @@ const NewTransactionModal = ({ isOpen, onRequestClose }: NewTransactionModalProp
       value,
       category,
       type,
+      createdAt: new Date(),
     };
 
     api.post('/transactions', data);
