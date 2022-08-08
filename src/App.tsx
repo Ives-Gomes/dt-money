@@ -5,8 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '@styles/global';
 import theme from '@utils/theme';
 
-import Header from '@components/Header';
-import Dashboard from '@components/Dashboard';
+import { Header, Dashboard } from '@components/index';
 
 Modal.setAppElement('#root');
 

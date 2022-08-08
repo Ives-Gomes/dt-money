@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Summary from '@components/Summary';
-import TransactionsTable from '@components/TransactionsTable';
+import { Summary, TransactionsTable } from '@components/index';
 
 import { Container } from './styles';
 
