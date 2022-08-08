@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-modal';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '@styles/global';
@@ -7,14 +8,35 @@ import theme from '@utils/theme';
 import Header from '@components/Header';
 import Dashboard from '@components/Dashboard';
 
-const App = () => (
-  <ThemeProvider theme={theme}>
-    <Header />
+Modal.setAppElement('#root');
 
-    <Dashboard />
+const App = () => {
+  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
-    <GlobalStyle />
-  </ThemeProvider>
-);
+  const handleOpenNewTransactionModal = () => {
+    setIsNewTransactionModalOpen(true);
+  };
+
+  const handleCloseNewTransactionModal = () => {
+    setIsNewTransactionModalOpen(false);
+  };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+
+      <Dashboard />
+
+      <Modal
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseNewTransactionModal}
+      >
+        <h2>Cadastrar transação</h2>
+      </Modal>
+
+      <GlobalStyle />
+    </ThemeProvider>
+  );
+};
 
 export default App;
