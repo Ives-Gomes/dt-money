@@ -7,7 +7,7 @@ import theme from '@utils/theme';
 
 import { Header, Dashboard, NewTransactionModal } from '@components/index';
 
-import { TransactionsProvider } from './TransactionsContext';
+import { TransactionsProvider } from '@hooks/useTransactions';
 
 Modal.setAppElement('#root');
 
