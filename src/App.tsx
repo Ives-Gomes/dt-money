@@ -7,6 +7,8 @@ import theme from '@utils/theme';
 
 import { Header, Dashboard, NewTransactionModal } from '@components/index';
 
+import { TransactionsProvider } from './TransactionsContext';
+
 Modal.setAppElement('#root');
 
 const App = () => {
@@ -21,18 +23,20 @@ const App = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+    <TransactionsProvider>
+      <ThemeProvider theme={theme}>
+        <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
 
-      <Dashboard />
+        <Dashboard />
 
-      <NewTransactionModal
-        isOpen={isNewTransactionModalOpen}
-        onRequestClose={handleCloseNewTransactionModal}
-      />
+        <NewTransactionModal
+          isOpen={isNewTransactionModalOpen}
+          onRequestClose={handleCloseNewTransactionModal}
+        />
 
-      <GlobalStyle />
-    </ThemeProvider>
+        <GlobalStyle />
+      </ThemeProvider>
+    </TransactionsProvider>
   );
 };
 
